@@ -45,7 +45,7 @@ plt.title('Sigmoid functions')
 plt.legend()
 plt.ylabel(r"$\frac{c}{1 + e^{-z}}$")
 plt.xlabel('z')
-plt.grid()
+
 ```
 
  <p align="center">
@@ -65,7 +65,6 @@ y = 3*x
 
 for c in range(1,5):
     plt.scatter(x,y + np.random.normal(int(20/0.2), scale = c*abs(x)), label = r"$\varepsilon \sim \mathcal{N}(0, \ $" + str(c) + "$\cdot x)$")
-plt.grid()
 plt.legend()
 plt.xlabel('x')
 plt.ylabel(r"$y = 3x + \varepsilon$")
