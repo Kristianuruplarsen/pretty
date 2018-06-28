@@ -76,3 +76,9 @@ plt.show()
 <p align="center">
 <img src="example_figures/hetero.png" alt="sigmoid functions">
 </p>  
+
+
+
+
+# Acknowledgements
+The color schemes are originally found [here](https://github.com/carolinethomson/GhibliColour).
