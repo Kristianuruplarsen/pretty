@@ -54,3 +54,4 @@ def style_classic(
     mpl.rcParams['savefig.dpi'] = save_dpi
 
     mpl.rcParams['axes.titlesize'] = 'xx-large'
+    mpl.rcParams['axes.labelsize'] = 'x-large'
