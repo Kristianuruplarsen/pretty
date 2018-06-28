@@ -7,7 +7,7 @@ This is my attempt at a simple, yet usable matplotlib style. So far it's just a 
 * `style_modern` - under development.
 
 # Installation
-Comming soon
+This package can be installed either by cloning the repo and running `pip install .` in the root folder, or by running `pip install git+git://github.com/KristianUrupLarsen/pretty.git`
 
 
 # Colorschemes
