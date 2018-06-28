@@ -1,6 +1,10 @@
 # pretty
 
-This is my attempt at a simple, yet usable matplotlib style. So far it's just one function, `style_classic` which produces relatively neutral figures. Simply call the function at the beginning of your script, and it will update the rcParams needed.
+This is my attempt at a simple, yet usable matplotlib style. So far it's just a few functions, the most important being `style_classic` which produces relatively neutral figures. Simply call the function at the beginning of your script, and it will update the rcParams needed. A full list of functions is
+
+* `style_classic` - sets the classic style shown below
+* `style_reset` - resets the style to the default matplotlib color_options
+* `style_modern` - under development.
 
 # Installation
 Comming soon
@@ -17,7 +21,7 @@ There is a number of colorschemes available, all based on the ghibli-studio insp
 * `totoro`
 * `princess_mononoke`
 * `nausicaa`
-* `ponyo` 
+* `ponyo`
 
 # `style_classic` examples
  Here are some examples of what can be made with `style_classic`:
