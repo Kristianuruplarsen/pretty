@@ -7,4 +7,7 @@ setup(name='pretty',
       author='Kristian Urup Olesen Larsen',
       license='MIT',
       packages=['pretty'],
+      install_requires=[
+        'matplotlib'      
+      ],
       zip_safe=False)
