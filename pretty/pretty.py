@@ -55,6 +55,12 @@ class prettyStyle:
     def __str__(self):
         return f"{self.__class__.__name__} style with palette {self.palette}"
 
+    def __enter__(self):
+            return self
+
+    def __exit__(self, exception_type, exception_value, traceback):
+            style_reset()
+
 
     class _cm:
         """ colormap internal class. Generates the two available colormaps as
@@ -109,7 +115,6 @@ class prettyStyle:
         """ Color options setter
         """
         return list(self._color_options.keys())
-
 
 
 
@@ -176,9 +181,3 @@ class style_classic(prettyStyle):
 
         self.palette = palette
         mpl.rcParams['axes.prop_cycle'] = cycler('color', self._color_options[self.palette])
-
-    def __enter__(self):
-            pass
-
-    def __exit__(self):
-            pass

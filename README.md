@@ -120,5 +120,28 @@ plt.show()
 </p>  
 
 
+## Using `with` and `pretty`
+
+the pretty style classes support `with` in case you only want to use the style for a
+specific piece of code. As an example consider
+
+```python
+with style_classic('ponyo') as s:
+
+    f, ax1 = plt.subplots(1,1)
+    ax1.pcolor(X, Y, Z, cmap = s.cm.full)
+    ax1.set_xlabel(r"$x$")
+    ax1.set_ylabel(r"$y$")
+    ax1.set_title(r"$e^{x*y}$ (\texttt{cmap = s.cm.full})")
+
+    plt.savefig('example_figures/colormaps_with.png')
+    plt.show()
+```
+
+
+<p align="center">
+<img src="example_figures/colormaps_with.png" alt="sigmoid functions">
+</p>  
+
 # Acknowledgements
 The color schemes are originally found [here](https://github.com/carolinethomson/GhibliColour).
