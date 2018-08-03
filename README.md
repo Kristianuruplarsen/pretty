@@ -1,6 +1,6 @@
 # pretty
 
-This is my attempt at a simple, yet usable matplotlib style. So far it's just a few functions, the most important being `style_classic` which produces relatively neutral figures. Simply call the function at the beginning of your script, and it will update the rcParams needed. A full list of functions is
+This is my attempt at a simple, yet usable matplotlib style. So far it's just a few functions, the most important being `style_classic` which produces relatively neutral figures. Simply call the class at the beginning of your script, and it will update the rcParams needed. You can also use the class interactively. A full list of functions is
 
 * `style_classic` - sets the classic style shown below
 * `style_reset` - resets the style to the default matplotlib color_options
@@ -78,6 +78,46 @@ plt.show()
 </p>  
 
 
+## Colormaps (interactive usage)
+We can convert all available color schemes into either a multilevel or binary colormap like so:
+
+```python
+s = style_classic('nausicaa')
+
+x = np.linspace(0,10, 200)
+y = np.linspace(0,10, 200)
+
+def f(x, y):
+    return np.sqrt(x*y)
+
+X, Y = np.meshgrid(x,y)
+Z = np.zeros(X.shape)
+
+for i in range(X.shape[0]):
+   for j in range(X.shape[0]):
+       Z[i,j] = f(X[i,j],Y[i,j])
+
+
+f, (ax1, ax2) = plt.subplots(1,2, sharey = True)
+ax1.pcolor(X, Y, Z, cmap = s.cm.full)
+ax1.set_xlabel(r"$x$")
+ax1.set_ylabel(r"$y$")
+ax1.set_title(r"\texttt{cmap = s.cm.full}")
+
+ax2.pcolor(X, Y, Z, cmap = s.cm.binary)
+ax2.set_xlabel(r"$x$")
+ax2.set_ylabel(r"$y$")
+ax2.set_title(r"\texttt{cmap = s.cm.binary}")
+
+plt.suptitle(r"$\sqrt{x\cdot y}$ with theme 'nausicaa'")
+
+plt.savefig('example_figures/colormaps.png')
+plt.show()
+```
+
+<p align="center">
+<img src="example_figures/colormaps.png" alt="sigmoid functions">
+</p>  
 
 
 # Acknowledgements

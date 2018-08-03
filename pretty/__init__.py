@@ -1,2 +1,2 @@
 
-from .pretty import *
+from pretty.pretty import *
