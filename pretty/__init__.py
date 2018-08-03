@@ -1,2 +1,2 @@
 
-from pretty.pretty import *
+from pretty.style_classic import *
