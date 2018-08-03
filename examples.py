@@ -1,7 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cmocean
-from pretty import style_classic
+from pretty import style_classic, style_modern
+
+
+
 
 # ------------------------------------------------------------------------------
 # Example 1: sigmoid lines
@@ -88,7 +91,7 @@ x = np.linspace(0,10, 200)
 y = np.linspace(0,10, 200)
 
 def f(x, y):
-    return np.exp(x*y)
+    return np.sqrt(x*y)
 
 X, Y = np.meshgrid(x,y)
 Z = np.zeros(X.shape)
@@ -98,13 +101,13 @@ for i in range(X.shape[0]):
        Z[i,j] = f(X[i,j],Y[i,j])
 
 
-with style_classic('ponyo') as s:
+with style_classic('option1') as s:
 
     f, ax1 = plt.subplots(1,1)
     ax1.pcolor(X, Y, Z, cmap = s.cm.full)
     ax1.set_xlabel(r"$x$")
     ax1.set_ylabel(r"$y$")
-    ax1.set_title(r"$e^{x*y}$ (\texttt{cmap = s.cm.full})")
+    ax1.set_title(r"$\sqrt{x\cdot y}$ (\texttt{cmap = s.cm.full})")
 
     plt.savefig('example_figures/colormaps_with.png')
     plt.show()
