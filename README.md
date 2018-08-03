@@ -34,18 +34,19 @@ style_classic('ponyo')
 
 def sigmoid(z, c):
     return c/(1 + np.exp(-z))
+
 sig_fn = np.vectorize(sigmoid)
 
 x = np.arange(-10, 10, .01)
-y =  sig_fn(x, 3)
 
 for c in range(1,11):
     plt.plot(x,sig_fn(x, np.sqrt(c)), label = 'c=' + str(c))
 plt.title('Sigmoid functions')
 plt.legend()
-plt.ylabel(r"$\frac{c}{1 + e^{-z}}$")
+plt.ylabel(r"$\frac{\sqrt{c}}{1 + e^{-z}}$")
 plt.xlabel('z')
-
+plt.savefig('example_figures/sigmoid.png')
+plt.show()
 ```
 
  <p align="center">
