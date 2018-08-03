@@ -1,10 +1,10 @@
 # pretty
 
-This is my attempt at a simple, yet usable matplotlib style. So far it's just a few functions, the most important being `style_classic` which produces relatively neutral figures. Simply call the class at the beginning of your script, and it will update the rcParams needed. You can also use the class interactively. A full list of functions is
+This is my attempt at a simple, yet usable matplotlib style. So far it's just a few classes, the most important being `style_classic` which produces relatively neutral figures. Simply call the class at the beginning of your script, and it will update the rcParams needed. You can also use the class interactively. A full list of functions and classes is
 
-* `style_classic` - sets the classic style shown below
-* `style_reset` - resets the style to the default matplotlib color_options
-* `style_modern` - under development.
+* class `style_classic` - sets the classic style shown below
+* function `style_reset` - resets the style to the default matplotlib color_options.
+* class `style_modern` - under development.
 
 # Installation
 This package can be installed either by cloning the repo and running `pip install .` in the root folder, or by running `pip install git+git://github.com/KristianUrupLarsen/pretty.git`
