@@ -39,6 +39,7 @@ class style_classic(prettyStyle):
 
         Params:
             palette (='ponyo'): The palette to use
+            drawgrid (=True): draw a grid on the figure?
             tex (=True): Use tex in figures?
             ubuntufont (=False): use ubuntu font?
             figsize (=(12.0, 8.0)): size of figures.
