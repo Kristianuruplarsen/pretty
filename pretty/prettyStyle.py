@@ -20,7 +20,7 @@ class prettyStyle:
         **kwargs: a dictionary of rcParams passed to matplotlib.
     """
 
-    def __init__(self, **kwargs):
+    def __init__(self,  **kwargs):
 
         # always begin by resetting style
         style_reset()

@@ -11,7 +11,6 @@ class style_classic(prettyStyle):
 
     FIXEDPARAMS = {'grid.color': 'k',
                    'grid.linestyle': ':',
-                   'grid.linewidth': 0.5,
 
                    'xtick.top': True,
                    'ytick.right': True,
@@ -28,8 +27,13 @@ class style_classic(prettyStyle):
                    'axes.grid': True}
 
     def __init__(self,
-                palette = 'ponyo', tex = True, ubuntufont = False,
-                figsize = (12.0, 8.0), save_dpi = 300, bgcolor = 'white'
+                palette = 'ponyo', 
+                drawgrid = True,
+                tex = True, 
+                ubuntufont = False,
+                figsize = (12.0, 8.0), 
+                save_dpi = 300, 
+                bgcolor = 'white'
                 ):
         """ Initializes self and prettyStyle.
 
@@ -48,6 +52,11 @@ class style_classic(prettyStyle):
         if tex:
             self.FIXEDPARAMS['text.usetex'] = True
             self.FIXEDPARAMS['font.family'] = 'serif'
+
+        if drawgrid:
+            self.FIXEDPARAMS['grid.linewidth'] = 0.5
+        else:
+            self.FIXEDPARAMS['grid.linewidth'] = 0
 
         # background color
         self.FIXEDPARAMS['figure.facecolor']  = bgcolor
