@@ -1,3 +1,3 @@
-
-from pretty.style_classic import *
-from pretty.style_modern import *
+from .pretty import LHCb
+from .pretty import Classic
+from .pretty import Monochrome
