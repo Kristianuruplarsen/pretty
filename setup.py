@@ -6,6 +6,7 @@ setup(name='pretty',
       url='http://github.com/KristianUrupLarsen/pretty',
       author='Kristian Urup Olesen Larsen',
       license='MIT',
+      include_package_data=True,
       packages=['pretty'],
       install_requires=[
         'matplotlib'      

@@ -1,0 +1,4 @@
+include README.md
+include styles/classicstyle
+include styles/lhcbstyle
+include monochromestyle
